@@ -4,8 +4,6 @@
   "private": true,
   "dependencies": {
     "@testing-library/dom": "^10.4.0",
-    "@testing-library/jest-dom": "^6.6.3",
-    "@testing-library/react": "^16.3.0",
     "@testing-library/user-event": "^13.5.0",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
@@ -44,7 +42,13 @@
     "@storybook/addon-onboarding": "^9.0.12",
     "@storybook/preset-create-react-app": "^9.0.12",
     "@storybook/react-webpack5": "^9.0.12",
+    "@testing-library/jest-dom": "^6.6.3",
+    "@testing-library/react": "^16.3.0",
     "eslint-plugin-storybook": "^9.0.12",
+    "identity-obj-proxy": "^3.0.0",
+    "jest": "^27.5.1",
+    "jest-environment-jsdom": "^30.0.0",
+    "jest-esbuild": "^0.3.0",
     "prop-types": "^15.8.1",
     "storybook": "^9.0.12",
     "webpack": "^5.99.9"
