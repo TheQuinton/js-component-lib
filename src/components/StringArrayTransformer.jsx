@@ -67,7 +67,7 @@ const StringArrayTransformer = ({ initialItems = [] }) => {
           </select>
 
           <h3>Transformed List</h3>
-          <ul>
+          <ul style={{ listStyleType: 'none' }}>
             {transformedArray.map((item, index) => (
               <li key={index}>
                 {item}{' '}
