@@ -1,6 +1,6 @@
 import React from 'react';
 import { render, screen, fireEvent } from '@testing-library/react';
-import StringArrayTransformer from '../../components/StringArrayTransformer';
+import StringArrayTransformer from './StringArrayTransformer';
 
 describe('StringArrayTransformer', () => {
   test('renders initial UI and parses input correctly', () => {

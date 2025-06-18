@@ -1,6 +1,6 @@
-import { useState } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
-import { useInputParser, useArrayOperations } from '../hooks/useStringArrayTransformer';
+import { useInputParser, useArrayOperations } from '../../hooks/useStringArrayTransformer';
 
 const StringArrayTransformer = ({ initialItems = [] }) => {
   const { input, setInput, error, parseInput } = useInputParser();
@@ -14,7 +14,7 @@ const StringArrayTransformer = ({ initialItems = [] }) => {
     }
   };
 
-  const [transformMode, setTransformMode] = useState('uppercase');
+  const [transformMode, setTransformMode] = React.useState('uppercase');
 
   const transformedArray = arrayOps.array.map(
     arrayOps.transformModeMap[transformMode]

@@ -1,22 +1,18 @@
 module.exports = {
-  // Clear mock calls and instances between tests
-  clearMocks: true,
-
   // The test environment that will be used for testing
   testEnvironment: 'jest-environment-jsdom',
+  setupFiles: ['text-encoding-polyfill'],
+  // Setup files to run after the test framework is installed
+  setupFilesAfterEnv: ['./setupTests.js'],
 
-  // Setup files after the environment is set up
-  setupFilesAfterEnv: ['@testing-library/jest-dom/extend-expect'],
-
-  // Transform config — use esbuild or ts-jest depending on your stack
+  // Transform config — use Babel, esbuild, or ts-jest depending on your stack
   transform: {
-    // For TypeScript, use ts-jest
-    // For modern JS (including JSX), use jest-esbuild or similar
-    '^.+\\.(ts|tsx|js|jsx)$': 'jest-esbuild',
+    // For modern JS/JSX files (including React components)
+    '^.+\\.(js|jsx)$': 'jest-esbuild',
   },
 
   // File extensions Jest will process
-  moduleFileExtensions: ['js', 'jsx', 'ts', 'tsx', 'json', 'node'],
+  moduleFileExtensions: ['js', 'jsx', 'json', 'node'],
 
   // Pattern to find test files
   testMatch: [
@@ -28,4 +24,11 @@ module.exports = {
   moduleNameMapper: {
     '\\.(css|less|scss|sass)$': 'identity-obj-proxy',
   },
+
+  // Automatically clear mock calls and instances between every test
+  clearMocks: true,
+
+  // Detect open handles to help track down memory leaks
+  detectOpenHandles: true,
+  forceExit: true,
 };

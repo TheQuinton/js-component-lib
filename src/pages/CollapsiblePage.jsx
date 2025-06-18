@@ -1,10 +1,8 @@
-import './App.css';
-import CollapsiblePanel from './components/CollapsiblePanel';
-import StringArrayTransformer from './components/StringArrayTransformer';
+import CollapsiblePanel from '../components/CollapsiblePanel/CollapsiblePanel';
 
-function App() {
+const CollapsiblePage = () => { 
   return (
-    <div className="App">
+    <div className="collapsible-page">
       <h1>React Collapsible Panel Example</h1>
       <CollapsiblePanel title="Section 1" defaultOpen>
         <p>This is the first collapsible section.</p>
@@ -12,9 +10,8 @@ function App() {
       <CollapsiblePanel title="Section 2">
         <p>This is another collapsible section. Try clicking to expand!</p>
       </CollapsiblePanel>
-      <StringArrayTransformer />
     </div>
   );
-}
+};
 
-export default App;
+export default CollapsiblePage;
