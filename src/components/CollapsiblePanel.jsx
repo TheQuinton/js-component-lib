@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import PropTypes from 'prop-types';
 
 // Styles are scoped to the component using CSS-in-JS or imported CSS Modules
 const styles = {
@@ -84,6 +85,12 @@ const CollapsiblePanel = ({ title, children, defaultOpen = false }) => {
       </div>
     </div>
   );
+};
+
+CollapsiblePanel.propTypes = {
+  title: PropTypes.string.isRequired,
+  defaultOpen: PropTypes.bool,
+  children: PropTypes.node.isRequired,
 };
 
 export default CollapsiblePanel;

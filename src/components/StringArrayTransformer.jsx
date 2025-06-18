@@ -1,9 +1,10 @@
 import { useState } from 'react';
+import PropTypes from 'prop-types';
 import { useInputParser, useArrayOperations } from '../hooks/useStringArrayTransformer';
 
-const StringArrayTransformer = () => {
+const StringArrayTransformer = ({ initialItems = [] }) => {
   const { input, setInput, error, parseInput } = useInputParser();
-  const arrayOps = useArrayOperations([]);
+  const arrayOps = useArrayOperations(initialItems);
 
   const handleParse = (e) => {
     e.preventDefault();
@@ -89,6 +90,14 @@ const StringArrayTransformer = () => {
       )}
     </div>
   );
+};
+
+StringArrayTransformer.propTypes = {
+  initialItems: PropTypes.arrayOf(PropTypes.string),
+};
+
+StringArrayTransformer.defaultProps = {
+  initialItems: [],
 };
 
 export default StringArrayTransformer;
