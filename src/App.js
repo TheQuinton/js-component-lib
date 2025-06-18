@@ -1,23 +1,18 @@
-import logo from './logo.svg';
 import './App.css';
+import CollapsiblePanel from './components/CollapsiblePanel';
+import StringArrayTransformer from './components/StringArrayTransformer';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1>React Collapsible Panel Example</h1>
+      <CollapsiblePanel title="Section 1" defaultOpen>
+        <p>This is the first collapsible section.</p>
+      </CollapsiblePanel>
+      <CollapsiblePanel title="Section 2">
+        <p>This is another collapsible section. Try clicking to expand!</p>
+      </CollapsiblePanel>
+      <StringArrayTransformer />
     </div>
   );
 }
