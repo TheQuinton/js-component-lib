@@ -1,5 +1,5 @@
 import React from 'react';
-import StringArrayTransformer from '../components/StringArrayTransformer';
+import StringArrayTransformer from '../components/StringArrayTransformer/StringArrayTransformer';
 
 export default {
   title: 'Components/StringArrayTransformer',

@@ -1,5 +1,5 @@
 import React from 'react';
-import CollapsiblePanel from '../components/CollapsiblePanel';
+import CollapsiblePanel from '../components/CollapsiblePanel/CollapsiblePanel';
 
 export default {
   title: 'Components/CollapsiblePanel',
