@@ -1,70 +1,126 @@
-# Getting Started with Create React App
+# React Component Library
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A collection of reusable React components including collapsible panels, array transformers, and API data viewers — built with modern React (React 18), Jest, and Storybook.
 
-## Available Scripts
+## 🧩 Components Included
 
-In the project directory, you can run:
+| Component | Description |
+|----------|-------------|
+| `CollapsiblePanel` | A simple expandable/collapsible panel |
+| `StringArrayTransformer` | Parses, transforms, sorts, and manipulates arrays of strings |
+| `DataDisplayComponent` | Fetches and displays data from an external API |
+| `Navbar` | Navigation bar with route support |
+| `HomePage` | Landing page showcasing all components |
 
-### `npm start`
+## 🚀 Features
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- Built with React 18
+- Uses React Router v6
+- Includes Jest unit tests
+- Storybook integration for visual development
+- Responsive and accessible design
+- Fully self-contained components
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## 📦 Prerequisites
 
-### `npm test`
+Make sure you have the following installed:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- [Node.js](https://nodejs.org/)  (v16 or higher)
+- npm or yarn
 
-### `npm run build`
+## 🛠️ Installation
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Clone the repo:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+```bash
+git clone https://github.com/yourusername/js-component-lib.git 
+cd js-component-lib
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Install dependencies:
+```bash
+npm install
+# or
+yarn install
+```
 
-### `npm run eject`
+## ▶️ Running the App
+Start the development server:
+```bash
+npm start
+# or
+yarn start
+```
+Open http://localhost:3000 in your browser.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## 📖 View Components in Storybook
+```bash
+npm run storybook
+# or
+yarn storybook
+```
+Visit http://localhost:6006 to explore stories for each component.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## 🧪 Run Unit Tests
+Run Jest tests:
+```bash
+npm test
+# or
+yarn test
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+To run tests in watch mode:
+```bash
+npm run test:watch
+# or
+yarn test --watch
+```
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## 📁 Folder Structure
+```bash
+js-component-lib/
+├── public/
+├── src/
+│   ├── components/        # Reusable React components
+│   ├── pages/             # Page-level components (e.g., HomePage)
+│   ├── App.jsx            # Main routing & layout
+│   └── main.jsx           # Entry point
+├── __tests__/             # Jest test files
+├── stories/               # Storybook stories
+├── package.json
+├── jest.config.js         # Jest configuration
+└── README.md
+```
 
-## Learn More
+## 🧰 Available Scripts
+| Script | Description |
+|--------|-------------|
+| `npm start` | Starts the development server |
+| `npm run build` | Builds the production version |
+| `npm test` | Runs Jest unit tests |
+| `npm run test:watch` | Runs tests in watch mode |
+| `npm run storybook` | Starts Storybook UI |
+| `npm run build-storybook` | Builds static Storybook site | 
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## 📌 Notes
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- The `DataDisplayComponent` fetches data from an external API and displays it. Make sure the API is running when you test this component.
+- All components are designed to be reusable and should work in different React projects.
+- The `StringArrayTransformer` component includes multiple transformation options (sort, filter, etc.) and can be used in various data processing scenarios.
+- The `Navbar` component includes route support and should be used as the main navigation for the application.
+- The `HomePage` component showcases all the available components and serves as a demonstration of how they can be used together.
+- All components are written in modern React (React 18) and use functional components with hooks.
+- The project includes Storybook for visual testing and component documentation.
+- The project includes Jest unit tests for each component to ensure reliability.
 
-### Code Splitting
+## 📌 To-Do
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+- Add more complex data transformation options to `StringArrayTransformer`
+- Implement additional API endpoints for `DataDisplayComponent`
+- Add more components to the library
+- Improve accessibility features
+- Add more test coverage
 
-### Analyzing the Bundle Size
+## 📌 License
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+This project is licensed under the GPL License - see the [LICENSE](LICENSE) file for details.
