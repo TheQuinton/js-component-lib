@@ -25,6 +25,14 @@ const HomePage = () => {
             Try It Out →
           </Link>
         </section>
+
+        <section style={styles.card}>
+          <h2>🌐 API Data Display</h2>
+          <p>Fetch and display data from external APIs</p>
+          <Link to="/data" style={styles.link}>
+            Try It Out →
+          </Link>
+        </section>
       </main>
 
       <footer style={styles.footer}>
