@@ -4,6 +4,7 @@ import HomePage from './pages/HomePage';
 import CollapsiblePage from './pages/CollapsiblePage';
 import DataDisplayPage from './pages/DataDisplayPage';
 import Navbar from './components/Navbar/Navbar';
+import ImageLoaderPage from './pages/ImageLoaderPage';
 import StringArrayTransformer from './components/StringArrayTransformer/StringArrayTransformer';
 import './App.css';
 
@@ -17,6 +18,7 @@ function App() {
           <Route path="/collapsible" element={<CollapsiblePage />} />
           <Route path="/transformer" element={<StringArrayTransformer />} />
           <Route path="/data" element={<DataDisplayPage />} />
+          <Route path="/image" element={<ImageLoaderPage />} />
         </Routes>
       </div>
     </BrowserRouter>
