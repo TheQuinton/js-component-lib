@@ -1,13 +1,13 @@
 import React from 'react';
 import { render, screen, waitFor, fireEvent } from '@testing-library/react';
-import DataDisplayComponent from './DataDisplayComponent';
+import DataDisplay from './DataDisplay';
 
 // Ensure fetch exists on window
 if (!window.fetch) {
   window.fetch = jest.fn();
 }
 
-describe('DataDisplayComponent', () => {
+describe('DataDisplay', () => {
   beforeEach(() => {
     // Always reset and mock fetch
     jest.clearAllMocks();
@@ -31,12 +31,12 @@ describe('DataDisplayComponent', () => {
     // Override fetch to never resolve
     window.fetch.mockImplementationOnce(() => new Promise(() => {}));
 
-    render(<DataDisplayComponent apiUrl="https://api.example.com/data"  />);
+    render(<DataDisplay apiUrl="https://api.example.com/data"  />);
     expect(screen.getByText(/loading/i)).toBeInTheDocument();
   });
 
   test('renders data successfully from API', async () => {
-    render(<DataDisplayComponent apiUrl="https://api.example.com/data"  />);
+    render(<DataDisplay apiUrl="https://api.example.com/data"  />);
 
     await waitFor(() => {
       expect(screen.getByText('Alice Smith')).toBeInTheDocument();
@@ -56,7 +56,7 @@ describe('DataDisplayComponent', () => {
       Promise.reject(new Error('Network response was not ok'))
     );
 
-    render(<DataDisplayComponent apiUrl="https://api.example.com/data"  />);
+    render(<DataDisplay apiUrl="https://api.example.com/data"  />);
 
     await waitFor(() => {
       expect(screen.getByText(/error/i)).toBeInTheDocument();
@@ -77,7 +77,7 @@ describe('DataDisplayComponent', () => {
       })
     );
 
-    render(<DataDisplayComponent apiUrl="https://api.example.com/data"  autoSort={true} />);
+    render(<DataDisplay apiUrl="https://api.example.com/data"  autoSort={true} />);
 
     await waitFor(() => {
       const firstItem = screen.getAllByText(/^([A-Z][a-z]+ [A-Z][a-z]+)/)[0];
@@ -91,7 +91,7 @@ describe('DataDisplayComponent', () => {
   });
 
   test('filters data based on search input', async () => {
-    render(<DataDisplayComponent apiUrl="https://api.example.com/data"  />);
+    render(<DataDisplay apiUrl="https://api.example.com/data"  />);
 
     await waitFor(() => {
       expect(screen.getByText('Alice Smith')).toBeInTheDocument();

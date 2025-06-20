@@ -8,9 +8,10 @@ A collection of reusable React components including collapsible panels, array tr
 |----------|-------------|
 | `CollapsiblePanel` | A simple expandable/collapsible panel |
 | `StringArrayTransformer` | Parses, transforms, sorts, and manipulates arrays of strings |
-| `DataDisplayComponent` | Fetches and displays data from an external API |
+| `DataDisplay` | Fetches and displays data from an external API |
 | `Navbar` | Navigation bar with route support |
 | `HomePage` | Landing page showcasing all components |
+| `ImageLoader` | Loads an image URL from a JSON file fetched via REST API and displays it |
 
 ## 🚀 Features
 
@@ -104,11 +105,12 @@ js-component-lib/
 
 ## 📌 Notes
 
-- The `DataDisplayComponent` fetches data from an external API and displays it. Make sure the API is running when you test this component.
+- The `DataDisplay` fetches data from an external API and displays it. Make sure the API is running when you test this component.
 - All components are designed to be reusable and should work in different React projects.
 - The `StringArrayTransformer` component includes multiple transformation options (sort, filter, etc.) and can be used in various data processing scenarios.
 - The `Navbar` component includes route support and should be used as the main navigation for the application.
 - The `HomePage` component showcases all the available components and serves as a demonstration of how they can be used together.
+- The `ImageLoader` component fetches a JSON file containing an image URL, displays the image dynamically, handles loading and error states, and supports drag-and-drop file uploads
 - All components are written in modern React (React 18) and use functional components with hooks.
 - The project includes Storybook for visual testing and component documentation.
 - The project includes Jest unit tests for each component to ensure reliability.
@@ -116,7 +118,7 @@ js-component-lib/
 ## 📌 To-Do
 
 - Add more complex data transformation options to `StringArrayTransformer`
-- Implement additional API endpoints for `DataDisplayComponent`
+- Implement additional API endpoints for `DataDisplay`
 - Add more components to the library
 - Improve accessibility features
 - Add more test coverage

@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
-import './DataDisplayComponent.css';
+import './DataDisplay.css';
 
-const DataDisplayComponent = ({ apiUrl, autoSort = false }) => {
+const DataDisplay = ({ apiUrl, autoSort = false }) => {
     const [data, setData] = useState([]);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
@@ -91,14 +91,14 @@ const DataDisplayComponent = ({ apiUrl, autoSort = false }) => {
 };
 
 // Default props for development/testing
-DataDisplayComponent.defaultProps = {
+DataDisplay.defaultProps = {
     apiUrl: 'https://jsonplaceholder.typicode.com/users'
 };
 
 // Type checking with PropTypes
-DataDisplayComponent.propTypes = {
+DataDisplay.propTypes = {
     apiUrl: PropTypes.string.isRequired,
     autoSort: PropTypes.bool,
 };
 
-export default DataDisplayComponent;
+export default DataDisplay;

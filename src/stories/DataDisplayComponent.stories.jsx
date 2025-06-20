@@ -1,9 +1,9 @@
 import React from 'react';
-import DataDisplayComponent from './DataDisplayComponent';
+import DataDisplay from './DataDisplay';
 
 export default {
-  title: 'Components/DataDisplayComponent',
-  component: DataDisplayComponent,
+  title: 'Components/DataDisplay',
+  component: DataDisplay,
   argTypes: {
     apiUrl: {
       control: 'text',
@@ -17,7 +17,7 @@ export default {
 };
 
 // Template for reuse across stories
-const Template = (args) => <DataDisplayComponent {...args} />;
+const Template = (args) => <DataDisplay {...args} />;
 
 // Default story using a public API
 export const Default = Template.bind({});
@@ -49,7 +49,7 @@ Sorted.parameters = {
 
 // Loading state simulation
 export const Loading = () => (
-  <DataDisplayComponent
+  <DataDisplay
     apiUrl="https://jsonplaceholder.typicode.com/users" 
     autoSort={false}
   />
@@ -65,7 +65,7 @@ Loading.parameters = {
 
 // Error state simulation
 export const ErrorState = () => (
-  <DataDisplayComponent
+  <DataDisplay
     apiUrl="https://invalid-url-for-error-test.com/data" 
     autoSort={false}
   />

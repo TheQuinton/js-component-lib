@@ -18,7 +18,7 @@ function App() {
           <Route path="/collapsible" element={<CollapsiblePage />} />
           <Route path="/transformer" element={<StringArrayTransformer />} />
           <Route path="/data" element={<DataDisplayPage />} />
-          <Route path="/image" element={<ImageLoaderPage />} />
+          <Route path="/image-loader" element={<ImageLoaderPage />} />
         </Routes>
       </div>
     </BrowserRouter>

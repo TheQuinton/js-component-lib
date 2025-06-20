@@ -14,7 +14,7 @@ const Navbar = () => {
             <Link to="/collapsible">Collapsible Panel</Link>
             <Link to="/transformer">String Array Transformer</Link>
             <Link to="/data">API Data Viewer</Link>
-            <Link to="/image">Image Loader</Link>
+            <Link to="/image-loader">Image Loader</Link>
         </nav>
     );
 };

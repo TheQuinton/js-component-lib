@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import DataDisplayComponent from '../components/DataDisplayComponent/DataDisplayComponent';
+import DataDisplay from '../components/DataDisplay/DataDisplay';
 
 const DataDisplayPage = () => {
   const [apiUrl, setApiUrl] = useState('https://jsonplaceholder.typicode.com/users'); 
@@ -24,7 +24,7 @@ const DataDisplayPage = () => {
           {sorted ? 'Disable Sorting' : 'Enable Sorting'}
         </button>
       </div>
-      <DataDisplayComponent apiUrl={apiUrl} autoSort={sorted}/>
+      <DataDisplay apiUrl={apiUrl} autoSort={sorted}/>
     </div>
   );
 }
