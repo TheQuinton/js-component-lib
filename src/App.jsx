@@ -9,20 +9,20 @@ import StringArrayTransformer from './components/StringArrayTransformer/StringAr
 import './App.css';
 
 function App() {
-  return (
-    <BrowserRouter>
-      <div className="App">
-        <Navbar />
-        <Routes>
-          <Route path="/" element={<HomePage />} />
-          <Route path="/collapsible" element={<CollapsiblePage />} />
-          <Route path="/transformer" element={<StringArrayTransformer />} />
-          <Route path="/data" element={<DataDisplayPage />} />
-          <Route path="/image-loader" element={<ImageLoaderPage />} />
-        </Routes>
-      </div>
-    </BrowserRouter>
-  );
+    return (
+        <BrowserRouter>
+            <div className="App">
+                <Navbar />
+                <Routes>
+                    <Route path="/" element={<HomePage />} />
+                    <Route path="/collapsible" element={<CollapsiblePage />} />
+                    <Route path="/transformer" element={<StringArrayTransformer />} />
+                    <Route path="/data" element={<DataDisplayPage />} />
+                    <Route path="/image-loader" element={<ImageLoaderPage />} />
+                </Routes>
+            </div>
+        </BrowserRouter>
+    );
 }
 
 export default App;
